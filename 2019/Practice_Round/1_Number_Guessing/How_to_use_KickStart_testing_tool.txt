@@ -15,25 +15,27 @@ Note: you can modify test-cases inside "testing_tool.py".
 
     
 [Debugging interaction between Python Judge and our NodeJS application]
-    It's possible to start NodeJS application in Debug mode and debug it(in Webstorm or Chrome Dev Tools) while it interacts with the KickStart Judge.
-    > python testing_tool.py node --inspect-brk 1_Number_Guessing
-        Here "--inspect-brk" will stop(break) application on the first line.
+    It's possible to start NodeJS application in Debug mode and debug it' +
+    (in Webstorm or Chrome Dev Tools) while it interacts with the KickStart Judge.
+        > python testing_tool.py node --inspect-brk 1_Number_Guessing
+            Here "--inspect-brk" will stop(break) application on the first line.
+            
+            1. Using Chrome Dev Tools.
+                Open Chrome > "about:inspect"
+                Press "inspect" below our application
         
-        1. Using Chrome Dev Tools.
-            Open Chrome > "about:inspect"
-            Press "inspect" below our application
+                Note: I've Tried "Open dedicated DevTools for Node", but it's blank for me.
+                    The benefit of "Open dedicated DevTools for Node" should be that it reattaches automatically
+                    if application was changed and restarted.
+            
+            2. Using WebStorm.
+                Run > Edit Configurations > + > Choose "Attach to Node.js/Chrome"
+                    Host: localhost (default)
+                    Port: 9229 (default)
     
-            Note: I've Tried "Open dedicated DevTools for Node", but it's blank for me.
-                The benefit of "Open dedicated DevTools for Node" should be that it reattaches automatically if application was changed and restarted.
+                Run > Debg "Name of created Configuration"
+                    Automatically program is stopped(break) on the first line.
+                    It's posible to Debug and to see stdout from NodeJS application in "Console" tab.
         
-        2. Using WebStorm.
-            Run > Edit Configurations > + > Choose "Attach to Node.js/Chrome"
-                Host: localhost (default)
-                Port: 9229 (default)
-
-            Run > Debg "Name of created Configuration"
-                Automatically program is stopped(break) on the first line.
-                It's posible to Debug and to see stdout from NodeJS application in "Console" tab.
-    
-                It's possible to use "console.error('some message useful in logs')", since KickStart Judges ignore stderror.
+                    It's possible to use "console.error('some message useful in logs')", since KickStart Judges ignore stderror.
         

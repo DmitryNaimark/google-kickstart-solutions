@@ -14,7 +14,7 @@ Note: you can modify test-cases inside "testing_tool.py".
         - See stdout values coming from the NodeJS application.
 
     
-[Debugging interaction between Python Judge and our NodeJS application in WebStorm]
+[Debugging interaction between Python Judge and our NodeJS application]
     It's possible to start NodeJS application in Debug mode and debug it(in Webstorm or Chrome Dev Tools) while it interacts with the KickStart Judge.
     > python testing_tool.py node --inspect-brk 1_Number_Guessing
         Here "--inspect-brk" will stop(break) application on the first line.

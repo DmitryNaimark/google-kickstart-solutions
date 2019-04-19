@@ -1,0 +1,4 @@
+Execute Python "testing_tool.py" script from the terminal(console).
+> python testing_tool.py node 1_Number_Guessing
+
+Note: you can modify test-cases inside "testing_tool.py".

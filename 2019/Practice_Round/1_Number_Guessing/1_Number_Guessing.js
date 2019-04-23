@@ -1,3 +1,12 @@
+// Solution idea:
+//    Guess number "in the middle": between provided min and max values.
+//    Then
+//        - If we get response that number is TOO_BIG, new max possible value becomes "guessNumber - 1"
+//        - If we get response that number is TOO_SMALL, new min possible value becomes "guessNumber + 1"
+//    And we keep guessing until we get CORRECT.
+//    In the worst case scenario min and max will eventually become the same number(which is the number we try to guess),
+//    and we'll guess it correctly, since 4 is "in the middle" of 4 and 4, for example.
+
 let readline = require('readline');
 
 let rl = readline.createInterface({
